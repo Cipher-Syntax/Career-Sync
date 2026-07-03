@@ -45,6 +45,20 @@ To guarantee scalability and stability, CareerSync is divided into three highly 
 2. **Core API (Django + Celery):** Handles secure authentication, user management, background email alerts, and payment processing (via PayMongo).
 3. **AI Microservice (FastAPI + PyTorch):** A dedicated, stateless NLP engine that safely handles heavy machine learning workloads (Entity extraction and Embedding generation) without bringing down the main web server.
 
+## AI-First Development Methodology
+
+CareerSync is built using a strict **6-File Agentic Methodology** designed to orchestrate AI coding assistants effectively. 
+
+Before any code was written, the entire system architecture, aesthetic, and behavioral constraints were hard-coded into six specific context files located in the `context/` directory:
+- `project-overview.md` (Scope & Success Criteria)
+- `architecture.md` (System Boundaries & Invariants)
+- `ui-context.md` (Design Tokens & Typography)
+- `code-standards.md` (Cross-Stack Engineering Rules)
+- `ai-workflow-rules.md` (Strict AI Agent Constraints)
+- `progress-tracker.md` (Live Execution State)
+
+This ensures that any AI agent interacting with the codebase has perfect, zero-hallucination context of the project state, preventing feature creep and architectural drift.
+
 ## Getting Started
 
 *(Documentation on how to run this project locally will be added as the infrastructure is initialized.)*
@@ -57,7 +71,7 @@ To guarantee scalability and stability, CareerSync is divided into three highly 
 
 ## Contributing
 
-We welcome contributions to CareerSync! Please ensure you read our `code-standards.md` and `ai-workflow-rules.md` before submitting a Pull Request.
+We welcome contributions to CareerSync! Please ensure you read our `context/code-standards.md` and `context/ai-workflow-rules.md` before submitting a Pull Request.
 
 ---
 <div align="center">
