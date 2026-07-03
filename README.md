@@ -1,90 +1,65 @@
-# CareerSync: An AI-Powered Resume Analysis and Job Recommendation System using NLP Embedding Techniques
+<div align="center">
+
+<h1><strong>CareerSync</strong></h1>
+
+**An AI-Powered Resume Analysis and Job Recommendation Platform**
+
+<br />
+
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](#)
+[![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)](#)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](#)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](#)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)](#)
+
+<br />
+
+*Eliminating keyword-matching. Connecting talent with opportunity through deep semantic understanding.*
+
+</div>
 
 ---
 
-# Project Overview
+## Overview
 
-CareerSync is an AI-powered web application designed to analyze resumes and recommend suitable job opportunities using Natural Language Processing (NLP) embedding techniques. The system extracts skills, qualifications, education, and experience from uploaded resumes, then compares them with job descriptions to identify the most relevant employment opportunities. By utilizing semantic matching rather than simple keyword searches, CareerSync aims to provide more accurate job recommendations and help users understand the skills needed to improve their career prospects.
+Traditional job hunting is broken. Recruiters and job platforms rely on rigid keyword-matching systems that fail to understand the true semantic relationship between technical skills and professional experience. 
 
----
+**CareerSync** is a modern, AI-powered recruitment engine. By leveraging Natural Language Processing (NLP) and transformer-based embeddings, CareerSync understands the actual context of a user's skills. It parses uploaded resumes, extracts technical competencies, and matches them against thousands of job descriptions using dense vector similarity.
 
-# Problem to be Solved
+Instead of just showing jobs, CareerSync provides **actionable intelligence**: telling job seekers exactly what skills they are missing to qualify for their dream roles.
 
-Traditional job portals primarily rely on keyword-based matching, which often fails to recognize related skills and competencies expressed using different terms. As a result, qualified applicants may miss relevant opportunities, while recruiters receive less accurate candidate matches. Job seekers also spend significant time manually searching through numerous job postings and identifying the skills required for their desired careers. There is a need for an intelligent system that can understand the meaning and context of resumes and job descriptions to provide more accurate job recommendations and skill gap insights.
+## Key Features
 
----
+- **Intelligent Resume Parsing:** Automatically extracts structured text and identifies technical skills from uploaded PDF and DOCX resumes using Named Entity Recognition (NER).
+- **Semantic Job Matching:** Goes beyond keywords. Uses `Sentence Transformers` and `pgvector` to find jobs that mathematically align with your true skill set.
+- **Skill Gap Analytics:** Visualizes exactly which required technologies are missing from your resume, providing a clear roadmap for upskilling.
+- **Asynchronous Alerts:** Background processing ensures you are instantly notified via email when new, highly compatible jobs are added to the platform.
+- **Enterprise-Grade Security:** Fully decoupled architecture featuring OAuth (Google/LinkedIn), JWT authentication, and Email OTP verification.
 
-# Objectives
+## System Architecture
 
-## General Objective
+To guarantee scalability and stability, CareerSync is divided into three highly specialized domains:
 
-To develop CareerSync, an AI-powered resume analysis and job recommendation system that uses NLP embedding techniques to provide intelligent employment matching and career improvement insights.
+1. **Frontend (React + TailwindCSS):** A premium, glassmorphic UI built for speed, relying on React Query for seamless data caching.
+2. **Core API (Django + Celery):** Handles secure authentication, user management, background email alerts, and payment processing (via PayMongo).
+3. **AI Microservice (FastAPI + PyTorch):** A dedicated, stateless NLP engine that safely handles heavy machine learning workloads (Entity extraction and Embedding generation) without bringing down the main web server.
 
-## Specific Objectives
+## Getting Started
 
-1. Develop a system that extracts relevant information from uploaded resumes.
-2. Implement semantic similarity matching between resumes and job descriptions.
-3. Generate job recommendations based on applicant qualifications and compatibility scores.
-4. Identify missing skills and provide recommendations for career improvement.
-5. Evaluate the effectiveness and accuracy of the recommendation system.
+*(Documentation on how to run this project locally will be added as the infrastructure is initialized.)*
 
----
+### Prerequisites
+- Node.js (v18+)
+- Python (3.10+)
+- PostgreSQL (with `pgvector` extension enabled)
+- Redis (for Celery workers)
 
-# Key Features
+## Contributing
 
-## Resume Upload and Parsing
-- Upload resumes in PDF and DOCX formats
-- Automatic text extraction and preprocessing
-- Resume content analysis
-
-## AI Resume Analysis
-- Technical skill detection
-- Qualification and competency analysis
-- Education and experience extraction
-
-## Intelligent Job Recommendation
-- Semantic matching between resumes and job descriptions
-- Compatibility score calculation
-- Ranked job recommendations
-
-## Skill Gap Analysis
-- Identification of missing skills
-- Recommended technologies and competencies
-- Career improvement suggestions
-
-## Semantic Search
-- Meaning-based job matching
-- Embedding similarity analysis
-- Related skill detection
-
-## Dashboard and Analytics
-- User profile management
-- Recommendation history
-- Skill and career analytics
+We welcome contributions to CareerSync! Please ensure you read our `code-standards.md` and `ai-workflow-rules.md` before submitting a Pull Request.
 
 ---
-
-# Technologies to be Used
-
-## Frontend
-- React
-- TailwindCSS
-
-## Backend
-- Django
-- Django REST Framework
-
-## Database
-- PostgreSQL
-
-## AI / NLP Libraries
-- Sentence Transformers
-- PyTorch
-- spaCy
-- Scikit-learn
-
----
-
-# Expected Output
-
-The expected output is a fully functional AI-powered web application that analyzes resumes, recommends relevant job opportunities, identifies skill gaps, and assists users in making informed career decisions through intelligent semantic matching and recommendation techniques.
+<div align="center">
+  Built with passion for the future of work.
+</div>
