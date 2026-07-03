@@ -20,7 +20,7 @@ The application is strictly separated into three distinct domains. Each domain l
 - `/frontend/` (React Application)
   - **Responsibility:** Presentation, UI/UX, and data rendering.
   - **Rules:** Owns the visual language. Contains no direct database access. Never holds secure backend keys.
-- `/backend-api/` (Django Application)
+- `/backend` (Django Application)
   - **Responsibility:** Core business logic, authentication, database CRUD operations, and payment handling.
   - **Rules:** Owns the primary PostgreSQL database. Does **not** process complex NLP tasks or load heavy PyTorch models into its memory. Offloads long-running tasks to Celery.
 - `/ai-service/` (FastAPI Microservice)
